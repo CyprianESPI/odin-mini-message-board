@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
     const body = req.body;
     const message = {text: body.message, user: body.author, added: new Date() };
     messages.push(message);
-    res.render('form');
+    res.redirect("/");
 });
 
 module.exports = router;
