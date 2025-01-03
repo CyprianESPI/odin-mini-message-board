@@ -10,7 +10,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 const homeRoute = require('./routes/home');
-app.use(homeRoute);
+app.use("/", homeRoute);
+
+const newRoute = require('./routes/new');
+app.use("/new", newRoute);
 
 app.listen(PORT, () => {
     console.log(`Listening on port http://${HOST_NAME}:${PORT}`);
