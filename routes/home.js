@@ -1,15 +1,4 @@
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date()
-    }
-];
+const messages = require("../models/db");
 const TITLE = "Mini Messageboard";
 
 const express = require("express");
